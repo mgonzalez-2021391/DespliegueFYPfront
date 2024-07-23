@@ -12,12 +12,9 @@ import { PublicationAdmin } from "./Pages/PublicationAdmin/PublicationAdmin";
 import { Veterinary } from "./Pages/Veterinary/Veterinary";
 import { AdoptionAppointment } from "./Pages/adoptionAppointment/adoptionAppointment";
 import { Home } from './Pages/Home/Home';
-
 import HomeChange from "./Components/HomeChange/HomeChange";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
-import { element } from "prop-types";
 import { HomeC } from "./Pages/Home/HomeC";
-
 
 export const routes = [
   {
@@ -26,11 +23,7 @@ export const routes = [
   },
   {
     path: '/HomeChange',
-    element: (
-      <HomeChange>
-        {/* Puedes renderizar algo aquí si lo necesitas */}
-      </HomeChange>
-    )
+    element: <HomeChange />
   },
   {
     path: '/Register',
@@ -38,14 +31,11 @@ export const routes = [
   },
   {
     path: '/Home',
-    element: (
-
-        <Home />
-    )
+    element: <Home />
   },
   {
     path: '/HomeC',
-    element: <HomeC/>
+    element: <HomeC />
   },
   {
     path: '/Pet',
