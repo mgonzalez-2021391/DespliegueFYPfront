@@ -1,8 +1,8 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import Login from "./Pages/Login/Login";
-import Register from "./Pages/Register/Register";
-import Pet from "./Pages/Pet/Pet";
+import { Register } from "./Pages/Register/Register";
+import  { Pet } from "./Pages/Pet/Pet";
 import { PetAdmin } from "./Pages/PetAdmin/PetAdmin";
 import { Vet } from "./Pages/Vet/Vet";
 import { Category } from "./Pages/Category/Category";
