@@ -1,0 +1,328 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.report-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.report-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.report-form-group label {
+  font-size: 1rem;
+  color: #c4ff0d;
+}
+
+.report-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #444;
+  color: white;
+  margin-bottom: 10px;
+  transition: border 0.3s ease;
+}
+
+.report-form input:focus {
+  border: 2px solid #c4ff0d;
+  outline: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.report-container {
+  padding: 20px;
+  position: relative;
+  background-color: #33242b;
+  width: 1100px;
+  max-width: 75%;
+  border-radius: 30px;
+  margin: 20px auto 20px 270px;
+}
+
+.report-title {
+  font-size: 2rem;
+  color: #c4ff0d;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.report-line {
+  width: 10%;
+  height: 4px;
+  background-color: #c4ff0d;
+  margin: 0 auto 20px auto;
+  animation: slide 2s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.report-search {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #c4ff0d;
+  background-color: #444;
+  color: white;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.report-search:focus {
+  border-color: #a3cc0a;
+  outline: none;
+}
+
+.report-table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+
+.report-table-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.report-table-container::-webkit-scrollbar-thumb {
+  background-color: #c4ff0d;
+  border-radius: 5px;
+}
+
+.report-table-container::-webkit-scrollbar-track {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+  margin-top: 20px;
+}
+
+.report-table th,
+.report-table td {
+  padding: 12px 15px;
+  border: none;
+  text-align: center;
+}
+
+.report-table th {
+  background-color: #e30842;
+  color: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.report-table td {
+  background-color: #333;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.report-table button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.report-table button:hover {
+  transform: scale(1.05);
+  background-color: #555;
+}
+
+.report-table .edit-btn {
+  background-color: #c4ff0d;
+  color: white;
+}
+
+.report-table .edit-btn:hover {
+  background-color: #a3cc0a;
+}
+
+.report-table .delete-btn {
+  background-color: #e30842;
+  color: white;
+}
+
+.report-table .delete-btn:hover {
+  background-color: #b00635;
+}
+
+.report-add-button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #c4ff0d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.report-add-button:hover {
+  transform: scale(1.05);
+  background-color: #a3cc0a;
+}
+
+.report-add-button:active {
+  transform: scale(0.95);
+}
+
+.report-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.report-form-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.report-form {
+  width: 50%;
+  background-color: #33242b;
+  padding: 50px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.report-form-title {
+  font-size: 2rem;
+  color: #c4ff0d;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.report-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #444;
+  color: white;
+  margin-bottom: 15px;
+  transition: border 0.3s ease;
+}
+
+.report-form input:focus {
+  border: 2px solid #c4ff0d;
+  outline: none;
+}
+
+.report-form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.report-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.report-form button:hover {
+  transform: scale(1.05);
+}
+
+.report-form .save-btn {
+  background-color: #c4ff0d;
+  color: white;
+}
+
+.report-form .save-btn:hover {
+  background-color: #a3cc0a;
+}
+
+.report-form .cancel-btn {
+  background-color: #e30842;
+  color: white;
+}
+
+.report-form .cancel-btn:hover {
+  background-color: #b00635;
+}
+
+@keyframes paw-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.report-title .paw-icon,
+.report-form-title .paw-icon {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  animation: paw-animation 2s infinite;
+  color: #c4ff0d;
+}

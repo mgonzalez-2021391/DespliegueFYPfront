@@ -1,0 +1,398 @@
+/* Veterinary.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.close-btn-large {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4b5c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-image-btn {
+  font-size: 0.9rem;
+  background-color: #2160e2;
+  color: white;
+}
+
+.close-btn-large:hover {
+  background-color: #ff1c33;
+}
+
+.close-btn-large:focus {
+  outline: none;
+}
+
+.veterinary-container {
+  padding: 20px;
+  position: relative;
+  background-color: #33242b;
+  width: 70%;
+  max-width: 90%;
+  border-radius: 30px;
+  margin: 20px auto;
+  margin-left: 310px; /* Añadir margen izquierdo para evitar colisión con el nav */
+  overflow-x: auto; /* Añadir barra de desplazamiento horizontal */
+  overflow-y: auto; /* Añadir barra de desplazamiento vertical */
+}
+
+.add-button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #c4ff0d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.pet-table .edit-btn, 
+.pet-table .delete-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #b3ff00;
+  margin: 10px;
+}
+
+.delete-btn {
+  background-color: #ff0040;
+}
+
+.edit-btn:hover {
+  background-color: #a3cc0a;
+}
+
+.delete-btn {
+  background-color: #e30842;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b00635;
+}
+
+.add-button:hover {
+  transform: scale(1.05);
+  background-color: #a3cc0a;
+}
+
+.add-button:active {
+  transform: scale(0.95);
+}
+
+.veterinary-list-container {
+  overflow-x: auto; /* Añadir barra de desplazamiento horizontal */
+  overflow-y: auto; /* Añadir barra de desplazamiento vertical */
+  max-height: 600px; /* Ajusta esta altura según tus necesidades */
+}
+
+.veterinary-title {
+  font-size: 2rem;
+  color: #c4ff0d;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.veterinary-line {
+  width: 10%;
+  height: 4px;
+  background-color: #c4ff0d;
+  margin: 0 auto 20px auto;
+  animation: slide 2s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.veterinary-search {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #c4ff0d;
+  background-color: #444;
+  color: white;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.veterinary-search:focus {
+  border-color: #a3cc0a;
+  outline: none;
+}
+
+.veterinary-list {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin-top: 20px;
+  white-space: nowrap; /* Evitar que el contenido se desborde */
+}
+
+.veterinary-list th,
+.veterinary-list td {
+  padding: 12px 15px;
+  border: none;
+}
+
+.veterinary-list th {
+  background-color: #e30842;
+  color: white;
+  border-radius: 10px;
+}
+
+.veterinary-list td {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.veterinary-list button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.veterinary-list button:hover {
+  transform: scale(1.05);
+  background-color: #555;
+}
+
+.veterinary-list .edit-btn {
+  background-color: #c4ff0d;
+  color: white;
+}
+
+.veterinary-list .delete-btn {
+  background-color: #ff0040;
+  color: white;
+}
+
+.veterinary-list .edit-btn:hover {
+  background-color: #a3cc0a;
+}
+
+.veterinary-list .delete-btn:hover {
+  background-color: #b00635;
+}
+
+.add-btn-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  background-color: #c4ff0d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+  background-color: #a3cc0a;
+}
+
+.add-btn:active {
+  transform: scale(0.95);
+}
+
+.veterinary-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.veterinary-form {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background: #33242b;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 80vh; /* Ajuste para el desplazamiento vertical */
+  overflow-y: auto; /* Activar el desplazamiento vertical */
+}
+
+.veterinary-form-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #ffea00;
+  margin-bottom: 20px;
+}
+
+.veterinary-form-content table {
+  padding-right: 15px;
+  width: 100%;
+}
+
+.veterinary-form-content table td {
+  padding: 5px;
+}
+
+.veterinary-form-content input,
+.veterinary-form-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #4b3e44;
+  color: #fff;
+}
+
+.veterinary-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.veterinary-submit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #a3cc0a;
+  color: #33242b;
+  cursor: pointer;
+  color: white;
+  margin-right: 10px;
+}
+
+.veterinary-cancel {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #e30842;
+  color: #33242b;
+  cursor: pointer;
+  color: white;
+  margin-left: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes paw-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.veterinary-title .paw-icon,
+.veterinary-form-title .paw-icon {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  animation: paw-animation 2s infinite;
+  color: #c4ff0d;
+}
+
+/* Estilos adicionales para el modal de imagen */
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.image-modal-content {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  max-height: 80%;
+  background: #33242b;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.large-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 10px;
+  display: block;
+}

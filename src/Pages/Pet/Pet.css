@@ -1,0 +1,237 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.adopt-title {
+  text-align: center;
+  margin: 50px 0 20px 0; /* Ajusta los márgenes para que esté más abajo */
+  font-size: 36px;
+  color: #333;
+}
+
+.flip-container {
+  perspective: 1000px;
+  width: 55%;
+  height: 70%;
+  position: relative;
+  margin-left: 200px;
+}
+
+.flipper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.selected-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.view-more-button {
+  position: absolute;
+  bottom: 20px;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.front:hover .view-more-button {
+  opacity: 1;
+}
+
+.view-more-button:hover {
+  background-color: #27ae60;
+}
+
+.selected-info {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.selected-info h2 {
+  margin: 0 0 10px;
+}
+
+.selected-info p {
+  margin: 5px 0;
+}
+
+.appointment-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.appointment-button:hover {
+  background-color: #27ae60;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #c0392b;
+}
+
+.preview-container {
+  width: 25%;
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.preview-item {
+  width: 90%;
+  margin: 10px 0;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.preview-item.active,
+.preview-item:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.preview-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.next-button,
+.prev-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px 30px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  z-index: 1; /* Ensure buttons are above other elements */
+}
+
+.next-button:hover,
+.prev-button:hover {
+  background-color: #1e8449;
+}
+
+.next-button {
+  right: 20px;
+}
+
+.prev-button {
+  left: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .flip-container {
+    width: 80%;
+    height: 50%;
+    margin-left: auto;
+  }
+
+  .preview-container {
+    width: 100%;
+    height: 150px;
+    flex-direction: row;
+    overflow-x: auto;
+    box-shadow: none;
+  }
+
+  .preview-item {
+    width: 150px;
+    margin: 0 10px;
+  }
+
+  .next-button,
+  .prev-button {
+    top: auto;
+    bottom: 10px;
+    transform: translateY(0);
+  }
+
+  .next-button {
+    right: 60px;
+  }
+
+  .prev-button {
+    left: 60px;
+  }
+}

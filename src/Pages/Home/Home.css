@@ -1,0 +1,236 @@
+/* Home.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.home-container {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 270px;
+  right: 0;
+  bottom: 0;
+  background-color: #33242b;
+  max-width: 75%;
+  border-radius: 30px;
+  margin: 20px;
+  overflow-y: auto;
+}
+
+/* Sección del título */
+.home-title-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 2px solid #c4ff0d;
+  border-radius: 15px;
+}
+
+.home-title {
+  font-size: 2rem;
+  color: #c4ff0d;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.home-title .paw-icon {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  animation: paw-animation 2s infinite;
+  color: #c4ff0d;
+}
+
+.home-line {
+  width: 10%;
+  height: 4px;
+  background-color: #c4ff0d;
+  margin: 0 auto 20px auto;
+  animation: slide 2s infinite;
+}
+
+@keyframes paw-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Sección de contenido */
+.home-content-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 2px solid #c4ff0d;
+  border-radius: 15px;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.home-text h1 {
+  color: #c4ff0d;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.home-text p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.home-image {
+  max-width: 50%;
+  border-radius: 15px;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección de características */
+.features-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 2px solid #c4ff0d;
+  border-radius: 15px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.feature-item {
+  text-align: center;
+  max-width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item i {
+  font-size: 2.5rem;
+  color: #c4ff0d;
+}
+
+.feature-item h2 {
+  color: #c4ff0d;
+  margin: 10px 0;
+}
+
+.feature-item p {
+  color: #fff;
+}
+
+/* Sección de galería */
+.gallery-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 2px solid #c4ff0d;
+  border-radius: 15px;
+}
+
+.gallery-title {
+  text-align: center;
+  color: #c4ff0d;
+  margin-bottom: 20px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección del mapa */
+.map-section {
+  padding: 20px;
+  border: 2px solid #c4ff0d;
+  border-radius: 15px;
+}
+
+.map-frame {
+  height: 400px; /* Ajusta la altura del mapa según sea necesario */
+  width: 100%; /* Asegura que el mapa ocupe el ancho completo del contenedor */
+  border-radius: 10px; /* Estilo opcional para bordes redondeados */
+}
+
+/* Sección de la tabla de alertas */
+.alert-table-section {
+  padding: 20px;
+  border: 2px solid #c4ff0d;
+  border-radius: 15px;
+}
+
+.alert-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.alert-table th,
+.alert-table td {
+  border: 1px solid #c4ff0d;
+  padding: 10px;
+  text-align: left;
+}
+
+.alert-table th {
+  background-color: #c4ff0d;
+  color: #33242b;
+}
+
+.alert-table td {
+  background-color: #fff;
+  color: #33242b;
+}

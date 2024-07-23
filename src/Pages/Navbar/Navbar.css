@@ -1,0 +1,89 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.navbar {
+  width: 250px;
+  height: 100vh;
+  background-color: #33242b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  color: #c4ff0d;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.navbar-links li {
+  width: 100%;
+}
+
+.navbar-links a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #444;
+  transform: translateX(5px);
+}
+
+.navbar-links a span {
+  margin-left: 10px;
+}
+
+.navbar-links a .fa {
+  font-size: 1.2rem;
+  color: #c4ff0d;
+}
+
+.navbar-links a:hover .fa {
+  color: #a3cc0a;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #444;
+  transform: translateX(5px);
+}
+
+.logout-button .fa {
+  font-size: 1.2rem;
+  color: #c4ff0d;
+}
+
+.logout-button:hover .fa {
+  color: #a3cc0a;
+}

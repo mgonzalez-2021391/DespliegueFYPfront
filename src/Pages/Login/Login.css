@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/fondo.jpg') no-repeat center center/cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.login-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #33242b;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-out;
+}
+
+.login-left {
+  flex: 1;
+  padding: 1rem;
+  margin-right: 20px;
+  color: #2c3e50;
+  box-sizing: border-box;
+  border-right: 2px solid #c4ff0d;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.login-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #c4ff0d;
+  font-family: 'Roboto', sans-serif;
+  animation: slideInLeft 1s ease-out;
+}
+
+.welcome-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.login-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.login-form .input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+  animation: slideInUp 1s ease-out;
+}
+
+.login-form .input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+.login-form .input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  padding-left: 50px;
+  /* Ajusta este valor para hacer espacio para el icono */
+  border: 2px solid #c4ff0d;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  background: #ecf0f1;
+  color: #33242b;
+  box-sizing: border-box;
+  /* Asegúrate de que el padding y el borde estén incluidos en el ancho total */
+}
+
+.login-form .input-group input:focus {
+  border-color: #c4ff0d;
+  outline: none;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 0.5rem;
+  color: #c4ff0d;
+  text-decoration: none;
+  text-align: right;
+  font-size: 0.75rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #c4ff0d;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-button:hover {
+  background-color: #a3cc0a;
+  transform: translateY(-3px);
+}
+
+.button-icon {
+  margin-right: 0.5rem;
+}
+
+.continue-with {
+  margin: 1rem 0;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #7f8c8d;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-button img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.social-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+}
+
+.register-link {
+  color: white;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.register-link a {
+  color: #c4ff0d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.placeholder-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.green-icon {
+  color: #c4ff0d;
+}
+
+.login-button .button-icon {
+  color: white;
+}

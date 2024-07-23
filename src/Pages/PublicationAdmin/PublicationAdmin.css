@@ -1,0 +1,323 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.publication-admin-container {
+  padding: 20px;
+  position: relative;
+  background-color: #33242b;
+  width: 1100px;
+  max-width: 75%;
+  border-radius: 30px;
+  margin: 20px auto 20px 270px;
+  /* Ajusta este margen para evitar que se superponga con el Navbar */
+}
+
+.publication-admin-title {
+  font-size: 2rem;
+  color: #c4ff0d;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.publication-admin-line {
+  width: 10%;
+  height: 4px;
+  background-color: #c4ff0d;
+  margin: 0 auto 20px auto;
+  animation: slide 2s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.publication-admin-search {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #c4ff0d;
+  background-color: #444;
+  color: white;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.publication-admin-search:focus {
+  border-color: #a3cc0a;
+  outline: none;
+}
+
+.publication-admin-table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+
+.publication-admin-table-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.publication-admin-table-container::-webkit-scrollbar-thumb {
+  background-color: #c4ff0d;
+  border-radius: 5px;
+}
+
+.publication-admin-table-container::-webkit-scrollbar-track {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.publication-admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+  margin-top: 20px;
+}
+
+.publication-admin-table th,
+.publication-admin-table td {
+  padding: 12px 15px;
+  border: none;
+  text-align: center;
+}
+
+.publication-admin-table th {
+  background-color: #e30842;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.publication-admin-table td {
+  background-color: #333;
+  border-radius: 0 0 10px 10px;
+}
+
+.publication-admin-table button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.publication-admin-table button:hover {
+  transform: scale(1.05);
+  background-color: #555;
+}
+
+.publication-admin-table .edit-btn {
+  background-color: #c4ff0d;
+  color: white;
+}
+
+.publication-admin-table .edit-btn:hover {
+  background-color: #a3cc0a;
+}
+
+.publication-admin-table .delete-btn {
+  background-color: #e30842;
+  color: white;
+}
+
+.publication-admin-table .delete-btn:hover {
+  background-color: #b00635;
+}
+
+.publication-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publication-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.publication-admin-add-button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #c4ff0d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.publication-admin-add-button:hover {
+  transform: scale(1.05);
+  background-color: #a3cc0a;
+}
+
+.publication-admin-add-button:active {
+  transform: scale(0.95);
+}
+
+.publication-admin-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 1;
+}
+
+.publication-admin-form-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.publication-admin-form {
+  width: 50%;
+  background-color: #33242b;
+  padding: 50px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.publication-admin-form-title {
+  font-size: 2rem;
+  color: #c4ff0d;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.publication-admin-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.publication-admin-form-group label {
+  font-size: 1rem;
+  color: #c4ff0d;
+}
+
+.publication-admin-form input,
+.publication-admin-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #444;
+  color: white;
+  margin-bottom: 10px;
+  transition: border 0.3s ease;
+}
+
+.publication-admin-form input:focus,
+.publication-admin-form textarea:focus {
+  border: 2px solid #c4ff0d;
+  outline: none;
+}
+
+.publication-admin-form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.publication-admin-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.publication-admin-form button:hover {
+  transform: scale(1.05);
+}
+
+.publication-admin-form .save-btn {
+  background-color: #c4ff0d;
+  color: white;
+}
+
+.publication-admin-form .save-btn:hover {
+  background-color: #a3cc0a;
+}
+
+.publication-admin-form .cancel-btn {
+  background-color: #e30842;
+  color: white;
+}
+
+.publication-admin-form .cancel-btn:hover {
+  background-color: #b00635;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes paw-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.publication-admin-title .paw-icon,
+.publication-admin-form-title .paw-icon {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  animation: paw-animation 2s infinite;
+  color: #c4ff0d;
+}
